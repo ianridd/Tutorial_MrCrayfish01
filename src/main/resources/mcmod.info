@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tm",
+  "name": "Tutorial Mod",
+  "description": "I followed MrCrayfish's excellent YouTube tutorials.",
+  "version": "1.0",
+  "mcversion": "1.8",
+  "url": "http://www.tek-kids.com",
+  "updateUrl": "",
+  "authorList": ["Hypnagogic"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

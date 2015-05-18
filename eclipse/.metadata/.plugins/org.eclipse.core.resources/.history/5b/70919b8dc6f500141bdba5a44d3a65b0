@@ -1,0 +1,12 @@
+package hypnagogic.mrcrayfishtutorial;
+
+import hypnagogic.mrcrayfishtutorial.init.TutorialItems;
+
+public class ChatItems {
+	@SubscribeEvent
+	public void giveItems(ServerChatEvent event){
+		if (event.message.contains("i want a dragon")) {
+			event.player.inventory.addStackItemsToInventory(new ItemStack(TutorialBlocks.test_blocks,3))
+		}
+	}
+}

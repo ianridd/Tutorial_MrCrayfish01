@@ -1,0 +1,25 @@
+package hypnagogic.mrcrayfishtutorial;
+
+import hypnagogic.mrcrayfishtutorial.init.TutorialBlocks;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
+import net.minecraftforge.event.ServerChatEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+public class ChatItems {
+	@SubscribeEvent
+	public void giveItems(ServerChatEvent event){
+		if (event.message.contains("i want a dragon")) {
+			event.player.inventory.addItemStackToInventory(new ItemStack(TutorialBlocks.test_block, 3));
+			
+			List players = event.entity.worldObj.playerEntities;
+			
+			for (int i = 0; i < players.size(); i++) {
+				EntityPlayer player = (EntityPlayer) players.get(i);
+				player.addChatMessage(new ChatComponentText(
+						EnumChatFormatting.GREEN + "This block will give you the dragon you desire!"));
+			}
+		}
+	}
+}

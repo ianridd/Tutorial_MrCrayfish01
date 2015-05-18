@@ -1,0 +1,66 @@
+package hypnagogic.mrcrayfishtutorial.init;
+
+import hypnagogic.mrcrayfishtutorial.Reference;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+public class TutorialItems {
+	
+	public static Item test_item;
+	public static Item cloud_crusher;
+	public static Item itemCheese;
+	public static Item cheeseSandwich;
+	
+	public static void init() {
+		test_item = new Item().setUnlocalizedName("test_item");
+		cloud_crusher = new Item().setUnlocalizedName("cloud_crusher");
+		itemCheese = new ItemFood(2, 1.0F, true).setUnlocalizedName("itemCheese");
+		cheeseSandwich = new ItemFood(2, 1.0F, true).setUnlocalizedName("cheeseSandwich");
+	}
+	
+	public static void register()
+	{
+		GameRegistry.registerItem(test_item, test_item.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(cloud_crusher, cloud_crusher.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(itemCheese, itemCheese.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(cheeseSandwich, cheeseSandwich.getUnlocalizedName().substring(5));
+	}
+	
+	public static void registerRenders()
+	{
+		registerRender(test_item);
+		registerRender(cloud_crusher);
+		registerRender(itemCheese);
+		registerRender(cheeseSandwich);
+	}
+	
+	public static void registerRender(Item item)
+	{
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+	}
+	
+	public static void registerRecipe()
+	{
+		GameRegistry.addRecipe(new ItemStack(cloud_crusher),"TFB"," D ","GET",
+				'T', Blocks.tnt,
+				'F', Items.flint_and_steel,
+				'B', Blocks.bedrock,
+				'D', Items.diamond_sword,
+				'G', Blocks.glowstone,
+				'E', Items.ender_eye);
+		
+		GameRegistry.addRecipe(new ItemStack(itemCheese, 8),"MMM"," G ","   ",
+				'M', Items.milk_bucket ,
+				'G', Items.wheat_seeds);
+		
+		GameRegistry.addRecipe(new ItemStack(cheeseSandwich, 3)," B "," C "," B  ",
+				'B', Items.bread ,
+				'C', TutorialItems.itemCheese );
+	}
+}
