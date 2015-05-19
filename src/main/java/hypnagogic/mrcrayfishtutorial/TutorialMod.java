@@ -3,6 +3,9 @@ package hypnagogic.mrcrayfishtutorial;
 import hypnagogic.mrcrayfishtutorial.init.TutorialBlocks;
 import hypnagogic.mrcrayfishtutorial.init.TutorialItems;
 import hypnagogic.mrcrayfishtutorial.proxy.CommonProxy;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -35,6 +38,7 @@ public class TutorialMod {
 		MinecraftForge.EVENT_BUS.register(new ChatItems());
 		MinecraftForge.EVENT_BUS.register(new DragonSpawner());
 		MinecraftForge.EVENT_BUS.register(new ArrowShotgun());
+		MinecraftForge.EVENT_BUS.register(new DropHandler());
 	}
 	
 	@EventHandler

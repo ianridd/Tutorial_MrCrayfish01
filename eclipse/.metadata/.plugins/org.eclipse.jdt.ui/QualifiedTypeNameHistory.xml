@@ -5,7 +5,6 @@
 <fullyQualifiedTypeName name="hypnagogic.mrcrayfishtutorial.init.TutorialItems"/>
 <fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
 <fullyQualifiedTypeName name="net.minecraft.block.Block"/>
-<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.registry.GameRegistry"/>
 <fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
 <fullyQualifiedTypeName name="net.minecraftforge.event.world.BlockEvent.PlaceEvent"/>
@@ -14,7 +13,11 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.PlayerInteractEvent"/>
 <fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.PlayerInteractEvent.Action"/>
-<fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.projectile.EntityArrow"/>
 <fullyQualifiedTypeName name="net.minecraft.world.World"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.living.LivingDropsEvent"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
+<fullyQualifiedTypeName name="hypnagogic.mrcrayfishtutorial.TutorialMod"/>
+<fullyQualifiedTypeName name="net.minecraft.creativetab.CreativeTabs"/>
 </qualifiedTypeNameHistroy>

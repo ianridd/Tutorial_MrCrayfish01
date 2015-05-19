@@ -1,6 +1,7 @@
 package hypnagogic.mrcrayfishtutorial.init;
 
 import hypnagogic.mrcrayfishtutorial.Reference;
+import hypnagogic.mrcrayfishtutorial.TutorialMod;
 import hypnagogic.mrcrayfishtutorial.item.ItemCloudCrusher;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -29,7 +30,7 @@ public class TutorialItems {
 		test_item = new Item().setUnlocalizedName("test_item");
 		cloud_crusher = new ItemCloudCrusher(cloudCrusherMaterial).setUnlocalizedName("cloud_crusher").setCreativeTab(CreativeTabs.tabCombat) ;
 		itemCheese = new ItemFood(2, 1.0F, true).setUnlocalizedName("itemCheese").setCreativeTab(CreativeTabs.tabFood) ;
-		cheeseSandwich = new ItemFood(2, 1.0F, true).setUnlocalizedName("cheeseSandwich").setCreativeTab(CreativeTabs.tabFood) ;
+		cheeseSandwich = new ItemFood(5, 1.0F, true).setUnlocalizedName("cheeseSandwich").setCreativeTab(CreativeTabs.tabFood) ;
 		grilledCheese = new ItemFood(2, 1.0F, true).setUnlocalizedName("grilledCheese").setCreativeTab(CreativeTabs.tabFood) ;
 		superEgg = new Item().setUnlocalizedName("superEgg");
 	}
